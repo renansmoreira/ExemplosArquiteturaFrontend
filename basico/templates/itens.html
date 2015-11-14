@@ -1,0 +1,39 @@
+<div class="ui card">
+	<div class="content">
+		<table>
+			<thead>
+				<tr>
+					<td>Nome</td>
+					<td>Preço</td>
+					<td>Qtde.</td>
+				</tr>
+			</thead>
+
+			<tbody>
+				{{#each this.itens}}
+				<tr>
+					<td>{{this.nome}}</td>
+					<td>R$ {{this.preco}}</td>
+					<td>{{this.quantidade}}</td>
+				</tr>
+				{{/each}}
+			</tbody>
+		</table>
+	</div>
+	<div class="extra content">
+		<ul>
+			<li>
+				<strong>Sub-total: </strong><span>{{this.subTotal}}</span>
+			</li>
+			<li>
+				<strong>Desconto: </strong><span data-js="desconto">{{this.desconto}}</span>
+			</li>
+			<li>
+				<strong>Frete: </strong><span data-js="frete">{{this.frete}}</span>
+			</li>
+			<li>
+				<strong>Total: </strong><span data-js="total">{{this.total}}</span>
+			</li>
+		</ul>
+	</div>
+</div>
